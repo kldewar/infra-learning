@@ -4,6 +4,10 @@ terraform {
       source  = "tehcyx/kind"
       version = "~> 0.7"
     }
+    helm = {
+      source  = "hashicorp/helm"
+      version = "~> 2.17"
+    }
   }
 
   required_version = ">= 1.0"
