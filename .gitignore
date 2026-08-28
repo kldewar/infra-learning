@@ -3,7 +3,5 @@
 *.tfstate
 *.tfstate.backup
 *.tfplan
-.terraform.lock.hcl
-
 # OS
 .DS_Store
