@@ -16,4 +16,14 @@ resource "helm_release" "argocd" {
   version          = "7.8.26"
   wait             = true
   timeout          = 300
+
+  set {
+    name  = "server.service.type"
+    value = "NodePort"
+  }
+
+  set {
+    name  = "server.service.nodePortHttps"
+    value = "30443"
+  }
 }
