@@ -27,7 +27,10 @@ resource "kubernetes_manifest" "nginx_app" {
         namespace = "nginx"
       }
       syncPolicy = {
-        automated = {}
+        automated = {
+          prune    = true
+          selfHeal = true
+        }
         syncOptions = ["CreateNamespace=true"]
       }
     }
